@@ -1,0 +1,27 @@
+/*9. Write a JavaScript program which accept a string as input and swap the case of each character. 
+For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'. 
+*/
+
+let str = ['a', 'B']
+function strOpposite(str){
+	let arr = str.split('')
+	return arr.reduce((acc, steps) => {
+		if(steps === steps.toLowerCase()){
+			acc += steps.toUpperCase()
+		}
+		else if(steps === steps.toUpperCase()){
+			acc += steps.toLowerCase()
+		}
+		return acc;
+	},"")
+}
+console.log(strOpposite('The Quick Brown Fox'))
+///////////////// OR  //////////////////////////////
+function strOpposite(str){
+	let arr = str.split('')
+	return arr.reduce((acc, steps) => {
+		steps === steps.toLowerCase()?acc += steps.toUpperCase():acc += steps.toLowerCase();
+		return acc;
+	},"")
+}
+console.log(strOpposite('The Quick Brown Fox'))
