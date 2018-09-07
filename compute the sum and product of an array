@@ -1,0 +1,13 @@
+/*Write a JavaScript program to compute the sum and product of an array of integers.
+*/
+
+function sumSquare(arr){
+	let sum = arr.reduce((acc, steps)=>{
+		return acc + steps
+	},0)
+	let product =  arr.reduce((acc, steps)=>{
+		return acc + (steps*steps)
+	},0)
+	return `the sum is ${sum} and the product is ${product}`;
+}
+console.log(sumSquare([0,1,2,3,4]))
