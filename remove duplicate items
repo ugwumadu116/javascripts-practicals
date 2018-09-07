@@ -1,0 +1,25 @@
+/*14. Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity)
+*/
+//let str = "the boy is always good";
+
+/////////////////// ANSWER  ////////////////////////////////
+/*function remRepeat(arr){
+	//let arr = str.split('')
+	return arr.reduce((acc,steps)=>{
+		if(acc.includes(steps) === false){
+			acc += steps			
+		}
+		return acc
+	},'')
+	
+}
+console.log(remRepeat([1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6]))*/
+
+////////////  OR  /////////////////////////////
+function removeDups(arr) {
+let newArr = arr.filter((current, index, k) => {
+return index === k.indexOf(current);
+});
+return newArr;
+};
+console.log(removeDups([1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6]))
