@@ -1,0 +1,25 @@
+/*Write a JavaScript program to shuffle an array.*/
+/*
+function shuffleArr(arr){
+	let ans = []
+	for(let i = 0; i < arr.length; i++){
+		ans.push(arr[Math.floor((Math.random() * arr.length) + 0)])
+		ans.push(arr[i])
+	}
+	let newArr = [];
+	ans.filter(steps => {
+		if(newArr.indexOf(steps) === -1){
+			newArr.push(steps)
+			return steps
+		}
+	})
+	console.log(newArr)
+
+}
+shuffleArr([2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010])*/
+///// OR  //////
+/*const shuffleArr = arr => arr
+.map(a => [Math.random(), a])
+.sort((a, b) => a[0] - b[0])
+.map(a => a[1]);
+console.table(shuffleArr([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));*/
