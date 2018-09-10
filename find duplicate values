@@ -1,0 +1,25 @@
+/*Write a JavaScript program to find duplicate values in a JavaScript array.*/
+
+/*function duplicateVal(arr1){
+	let duplicate = []
+	let ans = arr1.sort((a,b)=>{
+		if(a-b === 0){
+			duplicate.push(a)
+			//console.log("They have duplicate",a)
+		}
+		return a -b
+	})
+	return duplicate
+	
+}
+console.log(duplicateVal([4,3,2,3,-2]))*/
+/*function findDuplicate(arr) {
+    const result = arr.filter((value, index, array) => array.indexOf(value) !== index);
+    return result;
+}
+console.log(findDuplicate([4,3,2,3,-2,4]))*/
+function hasNoDuplicates(arr){
+return arr.every(function(val){
+return arr.indexOf(val) === arr.lastIndexOf(val)
+})
+}
