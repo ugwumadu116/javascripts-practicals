@@ -1,0 +1,35 @@
+/*23. Write a JavaScript function to find the difference of two arrays. Go to the editor
+Test Data :
+console.log(([1, 2, 3], [100, 2, 1, 10])); 
+["3", "10", "100"]
+console.log(didifferencefference([1, 2, 3, 4, 5], [1, [2], [3, [[4]]],[5,6]])); 
+["6"]
+console.log(difference([1, 2, 3], [100, 2, 1, 10]));
+["3", "10", "100"] */
+
+
+function difference(arr1, arr2){
+	let a1 = arr1.toString().split(",")
+	let a2 = arr2.toString().split(",")
+	let array = [...a1,...a2]
+	let anss = []
+	array.map((steps,index, arrr) => {
+		if(a1.indexOf(steps) === -1){
+			anss.push(steps)
+		}else if(a2.indexOf(steps) === -1){
+			anss.push(steps)
+		}
+	})
+	console.log(anss)
+}
+difference([1, 2, 3], [100, 2, 1, 10])
+///// OR  //////////////////////////////////////////
+function difference(arr1, arr2){
+	let a1 = arr1.toString().split(",")
+	let a2 = arr2.toString().split(",")
+	let array = [...a1,...a2]
+  let titi = array.filter((val, index) =>  array.indexOf(val) === array.lastIndexOf(val));	
+	console.log(titi)
+
+}
+difference([1, 2, 3], [100, 2, 1, 10])
