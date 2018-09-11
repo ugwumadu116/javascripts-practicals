@@ -1,0 +1,27 @@
+/*.28. Write a JavaScript function to find the longest common starting substring in a set of strings. Go to the editor
+
+Sample array : console.log(longest_common_starting_substring(['go', 'google']));
+Expected result : "go"*/
+
+function commonSubstring(arr) {
+
+    let newStr = "";
+
+    const str1 = arr[0];
+    const str2 = arr[1];
+
+    for (let i = 0; i < str1.length; i++) {
+        while (str1[i] === str2[i]) {
+            newStr += str1[i];
+            break;
+        }
+    }
+
+    return newStr;
+
+}
+
+console.log(commonSubstring(['go', 'google'])); // go
+console.log(commonSubstring(['goog', 'google'])); // goog
+console.log(commonSubstring(['SQLInjection', 'SQLTutorial'])); // SQL
+console.log(commonSubstring(['abcd', '1234']));
