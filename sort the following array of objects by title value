@@ -1,0 +1,42 @@
+/*25. Write a JavaScript function to sort the following array of objects by title value. Go to the editor
+Sample object :
+
+var library = [ 
+   { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+   { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+   { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
+   ];
+   //
+   [[object Object] {
+  author: "Suzanne Collins",
+  libraryID: 3245,
+  title:"Mockingjay:The Final Book of The Hunger Games"
+}, [object Object] {
+  author: "Bill Gates",
+  libraryID: 1254,
+  title: "The Road Ahead"
+}, [object Object] {
+  author: "Steve Jobs",
+  libraryID: 4264,
+  title: "Walter Isaacson"
+}]*/
+//////////////////////  SOLUTIONS ///////////////////////////////
+let library = [ 
+   { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+   { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+   { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
+   ];
+let ans = library.sort((a,b)=> {
+	return a.title > b.title
+})
+console.log(ans)
+///////////// OR  //////////////////////////////////////
+var library = [ 
+   { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+   { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+   { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
+   ];
+var r=[];
+var r=library.sort(function(a,b) {return  a.title>b.title});
+r=JSON.stringify(r)
+console.log(r)
