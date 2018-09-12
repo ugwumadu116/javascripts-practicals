@@ -1,0 +1,21 @@
+/*Write a JavaScript function to uncamelize a string.
+
+Test Data:
+console.log(uncamelize('helloWorld')); 
+console.log(uncamelize('helloWorld','-')); 
+console.log(uncamelize('helloWorld','_'));
+"hello world" 
+"hello-world" 
+"hello_world"*/
+
+
+function uncamelize(str,rep){
+	if(rep === undefined){
+		return str.replace(/[A-Z]/g, step => " "+step.toLowerCase())
+	}else{
+	return str.replace(/[A-Z]/g, step => rep+step.toLowerCase())
+	}
+}
+console.log(uncamelize('helloWorld joelUgwumadu')); 
+console.log(uncamelize('helloWorld joelUgwumadu','-')); 
+console.log(uncamelize('helloWorld joelUgwumadu','_'));
