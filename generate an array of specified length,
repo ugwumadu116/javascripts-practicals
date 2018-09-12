@@ -1,0 +1,26 @@
+/*Write a JavaScript function to generate an array of specified length, filled with integer numbers, increase by one from starting position.
+
+Test Data :
+console.log(array_range(1, 4)); 
+[1, 2, 3, 4]
+console.log(array_range(-6, 4));
+[-6, -5, -4, -3]*/
+
+
+//console.log(Array(4).fill(1+1))
+
+/*function array_range(itemIncre, numTimes){
+	let ans = []
+	for(let i = 0; i<numTimes; i++,itemIncre++){
+		ans.push(itemIncre)		
+	}	
+	return ans
+}
+console.log(array_range(1, 4)); */
+
+function arrayRange( start, range ) {
+	return Array( range ).fill().map(( steps, index ) => start + index );
+}
+
+console.log( arrayRange( 1, 4 )); // [ 1, 2, 3, 4 ]
+console.log( arrayRange( -6, 4 )); // [ -6, -5, -4, -3 ]
