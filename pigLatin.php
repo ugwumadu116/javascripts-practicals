@@ -1,5 +1,5 @@
 <script>
-
+// this is for string manipulation
 const word = "amlet";
 
 const pigLatin = text => {
