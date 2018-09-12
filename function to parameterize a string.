@@ -1,0 +1,15 @@
+/*Write a JavaScript function to parameterize a string.
+
+Test Data:
+console.log(string_parameterize("Robin Singh from USA."));
+"robin-singh-from-usa"*/
+
+function string_parameterize(str){
+	return str.toLowerCase().split(' ').join('-')
+}
+console.log(string_parameterize("Robin Singh from USA."));
+///////////////
+string_parameterize = function (str1) {
+    return str1.trim().toLowerCase().replace(/[^a-zA-Z0-9 -]/, "").replace(/\s/g, "-");
+};
+console.log(string_parameterize("Robin Singh from USA."));
