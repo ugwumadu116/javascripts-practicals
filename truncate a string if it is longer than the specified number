@@ -1,0 +1,26 @@
+/*Write a JavaScript function to truncate a string if it is longer than the specified number of characters. 
+Truncated strings will end with a translatable ellipsis sequence ("…") (by default) or specified characters.
+
+Test Data:
+console.log(text_truncate('We are doing JS string exercises.')) 
+console.log(text_truncate('We are doing JS string exercises.',19))
+console.log(text_truncate('We are doing JS string exercises.',15,'!!'))
+"We are doing JS string exercises." 
+"We are doing JS ..." 
+"We are doing !!"*/
+function text_truncate(main_string, pos, character) {
+if ((typeof (ins_string) == "undefined") && (typeof (pos) == "undefined")) {
+return main_string;
+}
+if (typeof (pos) == "undefined") {
+pos = 0;
+}
+if (typeof (character) == "undefined") {
+character = '...';
+}
+
+return main_string.substr(0, pos) + character;
+}
+console.log(text_truncate('We are doing JS string exercises.'))
+console.log(text_truncate('We are doing JS string exercises.', 19))
+console.log(text_truncate('We are doing JS string exercises.', 15, '!!'))
