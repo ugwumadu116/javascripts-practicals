@@ -1,0 +1,38 @@
+/*Write a JavaScript function to insert a string within a string at a particular position (default is 1).
+
+Test Data:
+console.log(insert('We are doing some exercises.')); 
+console.log(insert('We are doing some exercises.','JavaScript ')); 
+console.log(insert('We are doing some exercises.','JavaScript ',18));
+"We are doing some exercises." 
+"JavaScript We are doing some exercises." 
+"We are doing some JavaScript exercises."*/
+
+/*function insert(str, strPut, pos){
+	let t = str.split('')
+	let ans = [];
+	for(let i = 0; i<t.length; i++){
+		if(i === pos){
+			ans.push(strPut)
+			ans.push(t[pos])
+		}else{ans.push(t[i])}
+	}
+	return ans.join('')
+}
+
+console.log(insert('We are doing some exercises.','JavaScript ',0));*/
+
+
+function insert(input,str,pos){
+if(pos == undefined && str == undefined){
+return input;
+}else if(pos == undefined){
+return str+input;
+}else{
+return input.substr(0,pos) + str + input.substr(pos,input.length);
+}
+}
+
+console.log(insert('We are doing some exercises.'));
+console.log(insert('We are doing some exercises.','JavaScript '));
+console.log(insert('We are doing some exercises.','JavaScript ',18));
