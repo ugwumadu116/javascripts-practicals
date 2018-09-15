@@ -1,0 +1,20 @@
+/*Write a JavaScript program to count number of words in string.
+
+The script will be used to:
+
+- Remove white-space from start and end position. 
+- Convert 2 or more spaces to 1. 
+- Exclude newline with a start spacing.*/
+/////////////////////////////////////////////////////////
+function count_words(str1)
+{
+//exclude  start and end white-space
+str1 = str1.replace(/(^\s*)|(\s*$)/gi,"");
+//convert 2 or more spaces to 1  
+str1 = str1.replace(/[ ]{2,}/gi," ");
+// exclude newline with a start spacing  
+str1 = str1.replace(/\n /,"\n");
+return `${str1} lenght = ${str1.length}`
+}
+
+console.log(count_words('The     quick brown fox jumps over the lazy dog.'))
