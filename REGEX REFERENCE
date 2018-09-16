@@ -1,4 +1,11 @@
-Perl and PHP Regular Expressions
+Regex for time TIME
+ regexp = /^(2[0-3]|[01]?[0-9]):([0-5]?[0-9]):([0-5]?[0-9])$/;
+  
+
+
+
+
+
 
 PHP regexes are based on the PCRE (Perl-Compatible Regular Expressions), so any regexp that works for one should be compatible with the other or any other language that makes use of the PCRE format. Here are some commonly needed regular expressions for both PHP and Perl. Each regex will be in string format and will include delimiters.
 All Major Credit Cards
