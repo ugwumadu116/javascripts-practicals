@@ -1,0 +1,17 @@
+/*Write a JavaScript program which returns a subset of a string.
+Sample Data: dog
+Expected Output: ["d", "do", "dog", "o", "og", "g"]*/
+
+function scat(str){
+	let t = str.split('');
+	let ans =[];
+	for (var m = 0; m < str.length; m++) 
+  {
+    for (var n = m+1; n<str.length+1; n++) 
+    {
+      ans.push(str.slice(m,n));
+    }
+  }
+  return ans
+}
+console.log(scat("dog"))
