@@ -1,0 +1,27 @@
+function smallestCommons(arr) {
+  let range = arr.sort((a,b)=> a-b)
+  let newArr = []
+  for(let i = range[0]; i<=range[1]; i++){
+  	newArr.push(i)
+  }
+  let LCM = 0
+  let x = true
+  while(x){
+  	LCM++
+  	for(let j =newArr[0]; j<=newArr[newArr.length-1]; j++){
+  		if(LCM%j !== 0){
+  			break;
+  		}
+  		else if(j == newArr[newArr.length-1]){
+  			x = false
+  		}
+  	}
+  }
+  return LCM
+}
+console.log(smallestCommons([1,5]))
+console.log(smallestCommons([5,1]))
+console.log(smallestCommons([10,2]))
+console.log(smallestCommons([1,13]))
+console.log(smallestCommons([23,18]))
+console.log(smallestCommons([10,3]))
