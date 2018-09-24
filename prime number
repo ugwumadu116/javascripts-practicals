@@ -1,4 +1,25 @@
 function getPrimes(max) {
+  let prime = []
+  for(let i = 2; i<=max; i++){
+
+  	for(let j =2; j<=i; j++){
+  		if(i==j){
+  		prime.push(i)
+  	}
+  	if(i%j === 0){
+  		break;
+  	}
+  	}
+  }
+  return prime;
+}
+
+console.log(getPrimes(20))
+
+OoooooooooooooooooooooooooooooRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+
+
+function getPrimes(max) {
     let sieve = []; 
     let primes = [];
     for (let i = 2; i <= max; i++) {
