@@ -1,0 +1,19 @@
+//Write a JavaScript program to find the greatest common divisor (gcd) of two positive numbers.
+
+
+var gcd = function(a, b) {
+  console.log(a)
+  return b === 0 ? a : gcd( b, a % b )
+} 
+
+console.log(gcd(108, 30));
+////////
+function gcd(a, b) {
+  var R;
+  while ((a % b) > 0)  {
+    R = a % b;
+    a = b;
+    b = R;
+  }
+  return b;
+}
